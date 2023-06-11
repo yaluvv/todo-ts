@@ -5,7 +5,7 @@
         @apply w-[40px] h-[40px] border-solid border-2 border-fuchsia-500 rounded-full bg-transparent;
 
         &.active {
-            @apply bg-fuchsia-500 bg-[url('check.svg')] bg-no-repeat bg-center bg-[length:18px_18px];
+            @apply bg-fuchsia-500 bg-[url('../check.svg')] bg-no-repeat bg-center bg-[length:18px_18px];
         }
     }
     p {
