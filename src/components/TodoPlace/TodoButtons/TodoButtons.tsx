@@ -10,9 +10,9 @@ import { useAppSelector } from "../../../hooks/hooks";
 
 const TodoButtons = () => {
   const dispatch = useAppDispatch();
+
   const { items } = useAppSelector((state) => state.todos);
   const checkedItems = items.filter((item) => item.checked);
-  const activeItems = items.filter((item) => !item.checked);
 
   const handleClearAll = () => {
     if (!items.length) {
