@@ -8,4 +8,11 @@
             @apply bg-fuchsia-500 bg-[url('check.svg')] bg-no-repeat bg-center bg-[length:18px_18px];
         }
     }
+    p {
+        @apply min-h-[35px] max-w-[80%] overflow-auto text-xl;
+
+        &.active {
+            @apply line-through;
+        }
+    }
 }

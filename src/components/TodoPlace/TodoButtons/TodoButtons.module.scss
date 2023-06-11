@@ -1,5 +1,5 @@
 .buttons {
-    @apply text-zinc-50 flex justify-between items-center mt-10;
+    @apply text-zinc-50 flex justify-between items-center mt-10 flex-wrap gap-2;
 
     button {
         @apply bg-fuchsia-800 rounded-lg p-2 hover:bg-fuchsia-500 transition ease-in-out duration-200;

@@ -1,19 +1,21 @@
-import { useState } from "react";
+import { TodoType } from "../../../types/types";
+import { useAppDispatch } from "../../../hooks/hooks";
+import { checkTodo } from "../../../store/slices/todoSlice";
 import styles from "./TodoItem.module.scss";
 
-const TodoItem = () => {
-  const [click, setClick] = useState(false);
+const TodoItem = ({ id, title, checked }: TodoType) => {
+  const dispatch = useAppDispatch();
+  const classN = checked ? styles.active : "";
 
-  const classN = click ? styles.active : "";
+  const handleCheckTodo = (id: string) => {
+    dispatch(checkTodo({ id }));
+  };
 
   return (
-    <div className={styles.item}>
-      <button
-        onClick={() => setClick((prev) => !prev)}
-        className={classN}
-      ></button>
-      <p>text zadachi</p>
-    </div>
+    <li className={styles.item}>
+      <button onClick={() => handleCheckTodo(id)} className={classN}></button>
+      <p className={classN}>{title}</p>
+    </li>
   );
 };
 
